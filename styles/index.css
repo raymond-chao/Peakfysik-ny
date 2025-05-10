@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #f0f0f0;
+    background-color: black;
     min-height: 100vh;
    /* overflow-x: hidden; */
 }
@@ -24,13 +24,13 @@ header {
 }
 .logo {
     font-size: 2em;
-    font-weight: #359381;
+    font-weight: rgb(255, 196, 0);
     pointer-events: none;
     margin-right: 270px;
 }
 .navigation a {
     text-decoration: none;
-    color: #359381;
+    color: rgb(255, 196, 0);
     padding: 6px 15px;
     border-radius: 20px;
     margin: 0 10px;
@@ -38,10 +38,10 @@ header {
 }
 .navigation a:hover,
 .navigation a.active {
-    background-color: #359381;
+    background-color: rgb(255, 196, 0);
     color: white;
 }
-.parallax {
+.peak {
     position: relative;
     display: flex;
     justify-content: center;
@@ -52,7 +52,7 @@ header {
 #text {
     position: absolute;
     font-size: 5em;
-    color: white;
+    color: rgb(255, 196, 0);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 }
 .peak img {
@@ -64,7 +64,7 @@ header {
 }
 .sec {
     position: relative; 
-    background: #003329;
+    background: black;
     padding: 100px;
 }
 .sec h2 {
