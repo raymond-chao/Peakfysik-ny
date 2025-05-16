@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -9,9 +9,14 @@
 body {
     background-color: black;
     min-height: 100vh;
-   /* overflow-x: hidden; */
 }
-header {
+.peak-main-background {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+}
+.navigation-header {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,8 +26,9 @@ header {
     justify-content: flex-start;
     align-items: center;
     z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
 }
-.logo {
+.nav-logo {
     font-size: 2em;
     font-weight: rgb(255, 196, 0);
     pointer-events: none;
@@ -41,7 +47,25 @@ header {
     background-color: rgb(255, 196, 0);
     color: white;
 }
-.peak {
+.nav-button {
+    background-color: rgb(255, 196, 0);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+.nav-button:hover {
+    background-color: white;
+    color: rgb(255, 196, 0);
+}
+
+
+.peak-main-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -49,18 +73,35 @@ header {
     height: 100vh;
 }
 
-#text {
+.peak-main-header-title {
     position: absolute;
     font-size: 5em;
     color: rgb(255, 196, 0);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 }
-.peak img {
+.peak-main-container img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     pointer-events: none;
+}
+.peak-main-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 196, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(30px);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease;
 }
 .sec {
     position: relative; 
@@ -76,4 +117,58 @@ header {
     font-size: 1em;
     color: white;
     font-weight: 300;
+} 
+
+line {
+    border-top: solid;
+    width: 1.5em;
+    margin-bottom: 7px;
+}
+
+.footer-main {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    line-height: 26px;
+    min-height: 271px;
+}
+
+.footer-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-main a {
+    text-decoration: none;
+}    
+.footer-main:hover {
+    transform: scale(1.2);
+}
+
+.footer-main-logo {
+    font-size: 24px;
+    font-style: bold;
+    letter-spacing: 3.36px;
+    margin-bottom: 0.3em;
+    color: #ffffff; 
+}
+
+.footer-main-slogan {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    margin-bottom: 1em;
+}
+
+.footer-main-socials {
+    display: flex;
+    gap: 1.5em;
+    color: white;
+}
+footer-main-socials a {
+    color: #ffffff;
+}
+.footer-main-socials a:hover {
+    transform: scale(1.3);
 }

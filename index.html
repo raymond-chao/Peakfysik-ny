@@ -7,44 +7,56 @@
     <title>Parallax</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://kit.fontawesome.com/aafa7cdabb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <img src="img/logo.png" alt="logo" class="logo" id="logo">
+    <header class="navigation-header">
+        <img src="img/logo.png" alt="logo" class="nav-logo" id="logo">
         <nav class="navigation">
             <a href="#" class="active">Home</a>
             <a href="#">About</a>
             <a href="#">Service</a>
             <a href="#">Contact</a>
         </nav>
+        <button class="nav-button">Kom igång!</button>
     </header>
-    <section class="peak">
-        <img src="img/bild1.jpg" id="bild1"> 
-        <h2 id="text">Peak Fysik</h2>
+    <section class="peak-main-header" >
+        <div class="peak-main-container">
+            <img src="img/bild1.jpg" id="bild1" class="peak-main-background" alt="background">
+            <h2 class="peak-main-header-title" id="title">Peak Fysik</h2>
+            <p class="peak-main-text" id="mainstext">Föreställ dig en starkare, uthålligare och mer balanserad version av dig själv.
+                 Oavsett om du är nybörjare, erfaren träningsentusiast eller elitidrottare, 
+                 är vi här för att hjälpa dig förverkliga dina mål.</p>
+        </div>
     </section>
-    <section class="sec">
-        <h2 class="peak-header">Peak Fysik</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, repellat facere consequatur deleniti nemo illum nesciunt dolorem porro magni
-            et eligendi harum quos consequuntur accusamus eaque ea explicabo corporis obcaecati! <br></br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, repellat facere consequatur deleniti nemo illum nesciunt dolorem porro magni
-            et eligendi harum quos consequuntur accusamus eaque ea explicabo corporis obcaecati! <br></br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, repellat facere consequatur deleniti nemo illum nesciunt dolorem porro magni
-            et eligendi harum quos consequuntur accusamus eaque ea explicabo corporis obcaecati! <br></br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, repellat facere consequatur deleniti nemo illum nesciunt dolorem porro magni
-            et eligendi harum quos consequuntur accusamus eaque ea explicabo corporis obcaecati! <br></br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, repellat facere consequatur deleniti nemo illum nesciunt dolorem porro magni
-            et eligendi harum quos consequuntur accusamus eaque ea explicabo corporis obcaecati! <br></br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, repellat facere consequatur deleniti nemo illum nesciunt dolorem porro magni
-            et eligendi harum quos consequuntur accusamus eaque ea explicabo corporis obcaecati! <br></br>
-
-        </p>
-
+    <section class="offering-section">
+        <div class="offering-container">
+            <p class="offering-main-text"></p>
+            
+        </div>
     </section>
 
 
-    <script src="script.js"></script>
+
+
+
+
+        <footer class="footer-main">
+        <div class="footer-main-container">
+            <a href="index.html"><p class="footer-main-logo">PEAK FYSIK</p></a>
+            <p class="footer-main-slogan">SLOGAN? BLI BÄTTRE IDAG?</p>
+            <div class="footer-main-socials">
+                <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <scrips src="js/gsap.js"></scrips>
 </body>
 
 </html>
