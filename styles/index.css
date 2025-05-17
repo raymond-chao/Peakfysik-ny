@@ -10,6 +10,7 @@ body {
     background-color: black;
     min-height: 100vh;
 }
+/* Peak Main */
 .peak-main-background {
     position: absolute;
     background-size: cover;
@@ -52,7 +53,7 @@ body {
     color: white;
     font-size: 20px;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 1px;
     font-weight: 700;
     border: none;
     cursor: pointer;
@@ -85,6 +86,7 @@ body {
     left: 0;
     width: 100%;
     pointer-events: none;
+    opacity: 0.5;
 }
 .peak-main-text {
     position: absolute;
@@ -103,26 +105,129 @@ body {
     overflow: hidden;
     transition: height 0.2s ease;
 }
-.sec {
-    position: relative; 
-    background: black;
-    padding: 100px;
-}
-.sec h2 {
-    font-size: 3em;
-    color: white;
-    margin-bottom: 10px;
-}
-.sec p {
-    font-size: 1em;
-    color: white;
-    font-weight: 300;
-} 
 
+.peak-main-button {
+    background-color: rgb(255, 196, 0);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 1px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 line {
     border-top: solid;
     width: 1.5em;
     margin-bottom: 7px;
+}
+/* Peak offerings */
+    .peak-section {
+        font-family: fonts.$main-font;
+        font-style: normal;
+        color: #E8E8E8;
+        line-height: 26px;
+        font-size: 20px;
+    
+        &-background-1 {
+            min-height: 700px;
+            max-width: 1770px;
+            width: 100%;
+            background-image: url(../img/bookmadrid1-background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-attachment: scroll;
+            display: flex;
+            gap: 4em;
+            padding-right: 50%;
+    
+            &-container {
+                margin-top: 20%;
+                margin-bottom: 20%;
+                background-color: #232323db;
+                max-width: 543px;
+                width: 100%;
+                height: 374px;
+                margin-left: 30%;
+            }
+        }
+        
+        &-background-2 {
+            min-height: 700px;
+            max-width: 1770px;
+            width: 100%;
+            background-image: url(../img/bookmadrid2-background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-attachment: scroll;
+            display: flex;
+            gap: 4em;
+            padding-left: 50%;
+    
+            &-container {
+                margin-top: 20%;
+                margin-bottom: 10%;
+                background-color: #232323da;
+                max-width: 543px;
+                width: 100%;
+                height: 374px;
+                margin-right: 10%;
+            }
+        }
+    
+        &-country {
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            margin-top: 2em;
+            margin-left: 2em;
+        }
+    
+        &-title {
+            font-weight: 400;
+            margin-top: 1em;
+            margin-left: 1.5em;
+        }
+    
+        &-text {
+            margin-top: 1em;
+            font-weight: 300;
+            font-size: 16px;
+            max-width: 508px;
+            min-height: 78px;
+            margin-left: 2em; 
+            margin-right: 2em;  
+        }
+    
+        &-button {
+            margin-top: 2em;
+            margin-left: 1em;
+        }
+    }
+    
+    .button-peak {
+        background-color: #5474FD;
+        color: #ffffff;
+        font-family: fonts.$secondary-font;
+        font-style: normal;
+        font-size: 100;
+        letter-spacing: 1.4px;
+        line-height: 26px;
+        font-size: 14px;
+        padding: 1em;
+        position: relative;
+        border: none;
+        height: 63px;
+        width: 228px;
+
+        &:hover {
+            color:white;
+            background-color: orange;
+            cursor: pointer;
+        }
+    }
 }
 
 .footer-main {
@@ -142,10 +247,11 @@ line {
 
 .footer-main a {
     text-decoration: none;
-}    
+} 
+/*   
 .footer-main:hover {
     transform: scale(1.2);
-}
+} */
 
 .footer-main-logo {
     font-size: 24px;
@@ -166,8 +272,8 @@ line {
     gap: 1.5em;
     color: white;
 }
-footer-main-socials a {
-    color: #ffffff;
+.footer-main-socials a {
+    color: white;
 }
 .footer-main-socials a:hover {
     transform: scale(1.3);
