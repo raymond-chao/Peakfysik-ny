@@ -60,6 +60,7 @@ body {
 }
 /* Peak Main */
 .peak-main-background{
+    position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -68,6 +69,7 @@ body {
 }
 .peak-main-background-image {
     position: absolute;
+    background-image: url(../img/bild1.jpg);
     top: 0;
     background-size: cover;
     background-position: center;
@@ -77,6 +79,7 @@ body {
     object-fit: cover;
     height: 120vh;
     filter: brightness(40%) blur(4px);
+    z-index: 0;
 }
 
 
@@ -138,6 +141,23 @@ body {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+/* Peak Main Scroll */
+.header-main-peak-section-scroll {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    margin-bottom: 6.8em;
+    z-index: 10;
+}
+.header-main-peak-section-scroll-text {
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
 }
 /* Peak offerings */
 .offerings-section {
