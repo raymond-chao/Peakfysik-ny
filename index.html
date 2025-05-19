@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peak Fysik</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="https://kit.fontawesome.com/aafa7cdabb.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <header class="navigation-header">
-        <img src="img/logo.png" alt="logo" class="nav-logo" id="logo">
+        <!-- Changed img.nav-logo from image to text or you can keep image, but fix CSS accordingly -->
+        <img src="img/logo.png" alt="Peak Fysik logo" class="nav-logo" id="logo" />
         <nav class="navigation">
             <a href="#" class="active">Home</a>
             <a href="#">About</a>
-            <a href="#">Service</a>
+            <a href="./pages/offerings.html">Tjänster</a>
             <a href="#">Contact</a>
         </nav>
         <button class="nav-button">Kom igång!</button>
     </header>
-    <section class="peak-main-header" >
+
+    <section class="peak-main-header">
         <div class="peak-main-container">
             <div class="peak-main-background"></div>
-            <!--<img src="img/bild1.jpg" id="bild1" class="peak-main-background-image" alt="background"> -->
+            <img src="img/bild1.jpg" id="bild1" class="peak-main-background-image" alt="background" />
             <h2 class="peak-main-header-title" id="title">Peak Fysik</h2>
-            <p class="peak-main-text" id="maintext">Föreställ dig en starkare, uthålligare och mer balanserad version av dig själv.
-                 Oavsett om du är nybörjare, erfaren träningsentusiast eller elitidrottare, 
-                 är vi här för att hjälpa dig förverkliga dina mål.</p>
-            <!--<button class="peak-main-button" id="mainbutton">Boka tid</button> -->
-        </div>
-        <div class="header-main-peak-section-scroll">
-            <p class="header-main-peak-section-scroll-text">Scroll Down</p>
-            <i class="fa-solid fa-chevron-down header-main-peak-section-scroll-chevron"></i>
+            <p class="peak-main-text" id="maintext">
+                Föreställ dig en starkare, uthålligare och mer balanserad version av dig själv.
+                Oavsett om du är nybörjare, erfaren träningsentusiast eller elitidrottare,
+                är vi här för att hjälpa dig förverkliga dina mål.
+            </p>
+            <!-- Uncomment if needed -->
+            <!-- <button class="peak-main-button" id="mainbutton">Boka tid</button> -->
+            <div class="header-main-peak-section-scroll">
+                <p class="header-main-peak-section-scroll-text">Scroll Down</p>
+                <i class="fa-solid fa-chevron-down header-main-peak-section-scroll-chevron"></i>
+            </div>
         </div>
     </section>
-    <!--
-    <section class="offering-section">
-        <div class="offering-container">
-            <h2 class="offerings-title">Tjänster</h2>
-            <p class="offering-main-text">Skräddarsydda program för dig som vill nå nya nivåer i träningen eller bygga en hållbar hälsa.</p>
-        </div>
-    </section>-->
-        <section class="offerings-section">
+    <!-- Offerings Section -->
+    <section class="offerings-section">
         <div class="offerings-section-background-1">
             <div class="offerings-section-background-1-container">
                 <h5 class="offerings-section-offer">Tjänster</h5>
                 <h4 class="offerings-section-title">PAKET 1</h4>
-                <p class="offerings-section-text">HELHETSHÄLSA OCH SMÄRTFRIHET
-                    FRIGÖR DIN KROPP, LINDRA SMÄRTA OCH LEV UTAN BEGRÄNSNINGAR.</p>
-                    <div class="offerings-section-button">
-                        <button type="button" class="button-offerings">BOKA NU</button>
-                    </div>
+                <p class="offerings-section-text">
+                    HELHETSHÄLSA OCH SMÄRTFRIHET
+                    FRIGÖR DIN KROPP, LINDRA SMÄRTA OCH LEV UTAN BEGRÄNSNINGAR.
+                </p>
+                <div class="offerings-section-button">
+                    <button type="button" class="button-offerings">BOKA NU</button>
+                </div>
             </div>
         </div>
+
         <div class="offerings-section-background-2">
             <div class="offerings-section-background-2-container">
                 <h5 class="offerings-section-offer">Tjänster</h5>
                 <h4 class="offerings-section-title">PAKET 2</h4>
-                <p class="offerings-section-text">PRESTATIONSOPTIMERING OCH ÅTERHÄMTNING
-                    TA DIN TRÄNING TILL NÄSTA NIVÅ, UTVÄRDERA, ANPASSA OCH DOMINERA.</p>
-                    <div class="offerings-section-button">
-                        <button type="button" class="button-offerings">BOKA NU</button>
-                    </div>
+                <p class="offerings-section-text">
+                    PRESTATIONSOPTIMERING OCH ÅTERHÄMTNING
+                    TA DIN TRÄNING TILL NÄSTA NIVÅ, UTVÄRDERA, ANPASSA OCH DOMINERA.
+                </p>
+                <div class="offerings-section-button">
+                    <button type="button" class="button-offerings">BOKA NU</button>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-
-
-
-        <footer class="footer-main">
+    <footer class="footer-main">
         <div class="footer-main-container">
             <a href="index.html"><p class="footer-main-logo">PEAK FYSIK</p></a>
             <p class="footer-main-slogan">BLI BÄTTRE IDAG</p>
@@ -85,10 +85,7 @@
         </div>
     </footer>
 
-
-    <script src="js/script.js"></script>
-    <script src="js/gsap.min.js"></script>
-
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
-
 </html>

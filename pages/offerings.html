@@ -3,11 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/offerings.css">
-    <title>Document</title>
+    <title>Våra Tjänster – PeakFysik</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/offerings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="list">
+            <div class="item">
+                <img src="../img/tjänster-bild1.jpg" alt="Träning Design Bild 1">
+                <div class="content">
+                    <div class="author">Paket 1</div>
+                    <div class="title">Peak</div>
+                    <div class="topic">Fysik</div>
+                    <div class="des">
+                        För dig som vill prioritera hälsa, smärtfri rörelse och bättre livskvalitet. Passar både vid smärta och för optimering av kroppsfunktion.
+
+Smärtlindring & Rörelseoptimering
+Vi använder beprövade rörelseövningar och terapeutiska tekniker för att lindra smärta och öka rörligheten.
+
+Rörelseanalys
+Noggrann analys av rörelsemönster för att identifiera och korrigera obalanser.
+
+Innehåll:
+Funktionsanalys + personligt anpassat program, 90 minuters besök.
+
+Plan:
+4-6 besök, med 2-3 veckors mellanrum för bästa resultat.
+
+Fördelar:
+Smärtlindring, förbättrad livskvalitet och hållbara, personliga program.
+                    </div>
+                    <div class="buttons">
+                        <button class="button-offerings">LÄS MER</button>
+                        <button class="button-offerings">BOKA NU</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../img/tjänster-bild2.jpg" alt="Träning Design Bild 2">
+                <div class="content">
+                    <div class="author">Paket 2</div>
+                    <div class="title">Peak</div>
+                    <div class="topic">Fysik</div>
+                    <div class="des">
+                        Våra Tjänster
+                    </div>
+                    <div class="buttons">
+                        <button class="button-offerings">LÄS MER</button>
+                        <button class="button-offerings">BOKA NU</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails (moved outside of .item and .list) -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../img/tjänster-bild2.jpg" alt="Miniatyrbild 1">
+                <div class="content">
+                    <div class="title">Paket 2</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/tjänster-bild1.jpg" alt="Miniatyrbild 2">
+                <div class="content">
+                    <div class="title">Paket 1</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="arrows">
+            <button id="prev" aria-label="Previous slide">&lt;</button>
+            <button id="next" aria-label="Next slide">&gt;</button>
+        </div>
+
+        <!-- Time bar -->
+        <div class="time"></div>
+    </div>
+
+    <script src="../js/offerings.js"></script>
 </body>
 </html>
