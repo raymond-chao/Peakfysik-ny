@@ -12,11 +12,10 @@ section, h2, p {
 }
 
 body {
-    background-color: black;
     min-height: 100vh;
 }
-
 /* Navigation */
+/*
 .navigation-header {
     position: absolute;
     top: 0;
@@ -32,9 +31,8 @@ body {
 
 .nav-logo {
     font-size: 2em;
-    /* font-weight should be a number or keyword like 'bold', not a color */
-    font-weight: 700; /* Changed from invalid value */
-    color: rgb(255, 196, 0); /* Use color property for color */
+    font-weight: 700;
+    color: rgb(255, 196, 0);
     pointer-events: none;
     margin-right: 270px;
 }
@@ -70,6 +68,64 @@ body {
 .nav-button:hover {
     background-color: white;
     color: rgb(255, 196, 0);
+}
+*/
+
+.nav {
+  overflow: hidden;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+.nav .icon {
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.nav-logo {
+  font-size: 2em;
+  font-weight: 700;
+  color: rgb(255, 196, 0);
+  pointer-events: none;
+  margin-left: auto;
+  height: 40px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar a {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f2f2f2;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: black;
+}
+
+.sidebar .active {
+  color: white;
 }
 
 /* Peak Main */
@@ -291,13 +347,13 @@ body {
 }
 
 .footer-main {
-    color: #ffffff;
+    color: black;
     display: flex;
     justify-content: center;
     line-height: 26px;
     min-height: 271px;
 }
-
+/* Footer */
 .footer-main-container {
     display: flex;
     flex-direction: column;
@@ -318,7 +374,7 @@ body {
     font-style: bold;
     letter-spacing: 3.36px;
     margin-bottom: 0.3em;
-    color: #ffffff; 
+    color: black; 
 }
 
 .footer-main-slogan {
@@ -330,10 +386,10 @@ body {
 .footer-main-socials {
     display: flex;
     gap: 1.5em;
-    color: white;
+    color: black;
 }
 .footer-main-socials a {
-    color: white;
+    color: black;
 }
 .footer-main-socials a:hover {
     transform: scale(1.3);

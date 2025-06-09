@@ -23,3 +23,4 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.from(".peak-main-header-title", { x:600, duration: 1,
   });
 });
+

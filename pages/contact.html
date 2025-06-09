@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aafa7cdabb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <title>Genesis Portfolio Design</title>
+</head>
+<body class="body__header">
+    <header>
+        <nav>
+            <a href="../index.html">Hem</a>
+            <a href="about.html">Om PeakFysik</a>
+            <a href="offerings.html">Tjänster</a>
+            <a href="contact.html">Kontakta oss</a>
+            <img class="nav-logo" src="../img/logo.png" alt="Logo">
+        </nav>
+        <main class="contact-main">
+            <section class="peak-video">
+                <div class="text-wrapper">
+                    <div class="kontakta-text">
+                        <img src="../img/kontakta.svg" alt="kontakta" id="kontakta">
+                    </div>
+                    <div class="oss-text">
+                        <img src="../img/oss.svg" alt="oss" id="oss">
+                    </div>
+                </div>
+                <video autoplay muted loop playsinline class="responsive-video">
+                    <source src="../img/pf-video-ny.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </header>
+        <section class="contact-top-section">
+            <div class="contact-top-section-left">
+                <h1 class="contact-top-section-left-title">Kontakta oss</h1>
+                <p class="contact-top-section-left-text">Our favorite brands are our friends! We help them to achieve their goals, they help us to stay sharp.</p>
+            </div>
+            <div class="contact-top-section-right">
+                <div class="contact-top-section-right-form">
+                    <form action="#submit">
+                        <div class="contact-top-section-right-form-label">
+                            <label for="name" class="label">Name</label>
+                            <input type="text" name="name" id="name" class="input-field" required>
+                        </div>
+                        <div class="contact-top-section-right-form-label">
+                            <label for="email" class="label">Email</label>
+                            <input type="email" name="email" id="email" class="input-field" required>
+                        </div>
+                        <div class="contact-top-section-right-form-label">
+                            <label for="message" class="label">Message</label>
+                            <input type="text" name="message" id="message" class="input-field" required>
+                        </div>
+                        <div class="contact-top-section-right-form-button">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="contact-map-section">
+            <div class="contact-map-section-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4264.424473690042!2d11.963728577199737!3d57.69586394068391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36d870257b7%3A0x173525c15935353!2sFighter%20Centre!5e0!3m2!1sen!2sse!4v1749477946465!5m2!1sen!2sse" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="footer-main-container">
+            <a href="index.html"><p class="footer-main-logo">PEAK FYSIK</p></a>
+            <p class="footer-main-slogan">BLI BÄTTRE IDAG</p>
+            <div class="footer-main-socials">
+                <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
