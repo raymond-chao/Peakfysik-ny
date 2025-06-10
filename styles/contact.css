@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 /* Nav */
 a {
@@ -16,7 +16,6 @@ nav {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 100;
 }
 nav a {
     margin-right: 40px;
@@ -24,21 +23,22 @@ nav a {
 .nav-logo {
     display: flex;
     position: absolute;
-    right: 20%;
+    left: 20%;
     align-items: center;
 }
 /* Kontakta oss img */
 .peak-video {
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  object-fit: cover;
-  height: 100vh;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    object-fit: cover;
+    overflow: hidden;
+    inset: 0 0 0 0;
 }
 .text-wrapper {
   position: absolute;
   display: flex;
-  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
@@ -53,7 +53,6 @@ nav a {
   align-items: center;
   z-index: 10;
   width: auto;
-  height: 100px ;
 }
 #kontakta,
 #oss {
@@ -71,13 +70,11 @@ nav a {
 /* Video */
 .responsive-video {
     width: 100%;
-    height: auto;
-    max-height: 100vh;
+    height: 100%;
     object-fit: cover;
-    display: block;
     z-index: 0;
-    position: relative;
 }
+/* Contact Section */
 .contact-top-section {
     display: flex;
     max-width: 1140px;
@@ -207,10 +204,6 @@ nav a {
 .footer-main a {
     text-decoration: none;
 } 
-/*   
-.footer-main:hover {
-    transform: scale(1.2);
-} */
 
 .footer-main-logo {
     font-size: 24px;

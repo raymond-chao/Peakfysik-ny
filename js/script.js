@@ -10,6 +10,7 @@ window.addEventListener('scroll', () => {
     maintext.style.marginTop = value * 2.5 + 'px';
     bild.style.top = value * -1.5 + 'px';
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   gsap.to(".nav-logo", {
     rotation: 360,
