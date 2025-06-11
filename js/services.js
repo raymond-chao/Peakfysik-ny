@@ -1,14 +1,37 @@
 const nextBtn = document.querySelector('.next-btn');	
 const prevBtn = document.querySelector('.prev-btn');
-const slides = document.querySelector('.slide');
-const numberOfSlides =  slide.length;
+const slides = document.querySelectorAll('.slide');
+const numberOfSlides =  slides.length;
 let slideNumber = 0;
 
 //slider next button
-nextBtn.onClick = () => {
+nextBtn.onclick = () => {
+
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+        
+    });
+
     slideNumber++;
-    if (slideNumber >= numberOfSlides) {
+    if (slideNumber > (numberOfSlides - 1)) {
         slideNumber = 0;
     }
-    updateSlide();
+
+    slides[slideNumber].classList.add('active');
+}
+
+//slider prev button
+prevBtn.onclick = () => {
+
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+        
+    });
+
+    slideNumber--;
+    if (slideNumber < 0) {
+        slideNumber = numberOfSlides - 1;
+    }
+
+    slides [slideNumber].classList.add('active');
 }

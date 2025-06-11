@@ -64,6 +64,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 .slider .slide {
     position: absolute;
@@ -76,6 +77,12 @@
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.slide.active img {
+    opacity: 1;
 }
 .slide .left-info {
     position: absolute;
@@ -83,6 +90,14 @@
     left: 0;
     width: 50%;
     height: 100%;
+    transform: translateX(-100%);
+    transition: 0s;
+}
+
+.slide.active .left-info {
+    transform: translateX(0);
+    z-index: 1;
+    transition: .5s ease;
 }
 .left-info .penetrate-blur {
     position: absolute;
@@ -97,10 +112,16 @@
     linear-gradient(#000 0 0);
     -webkit-mask-clip: text, padding-box;
     -webkit-mask-composite: xor;
+    padding-right: 20px;
 }
 .penetrate-blur h1 {
     font-size: 250px;
     text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+}
+/* Edit 2 till 4 om du ska ha 4 slides */
+.slide:nth-child(1) .penetrate-blur h1,
+.slide:nth-child(2) .penetrate-blur h1{
+    margin-right: -10px;
 }
 .left-info .content {
     position: absolute;
@@ -142,6 +163,14 @@
     height: 100%;
     display: flex;
     align-items: center;
+    transform: translateX(100%);
+    transition: 0s;
+}
+
+.slide.active .right-info {
+    transform: translateX(0);
+    z-index: 1;
+    transition: .5s ease;
 }
 .right-info h1 {
     font-size: 250px;
@@ -159,6 +188,11 @@
     0 5px 10px rgba(0, 0, 0, .25),
     0 10px 10px rgba(0, 0, 0, .2),
     0 20px 20px rgba(0, 0, 0, .15);
+}
+/* Byt ut 1 till 4 om du ska ha 4 slides */
+.slide:nth-child(2) .right-info h1,
+.slide:nth-child(1) .right-info h1 {
+    margin-left: 10px;
 }
 .right-info h3 {
     position: absolute;
