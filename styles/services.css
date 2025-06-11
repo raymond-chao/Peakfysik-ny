@@ -19,7 +19,7 @@
 
 .logo {
     font-size: 30px;
-    color: white;
+    color: black; /* Ändra till vit för att matcha bakgrunden */
     text-decoration: none;
     font-weight: 700;
 }
@@ -33,7 +33,7 @@
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid black; /* Ändra till vit för att matcha bakgrunden */
     border-radius: 6px;
     text-decoration: none;
     margin-right: 10px;
@@ -44,7 +44,7 @@
 }
 .social-media a i {
     font-size: 20px;
-    color: white;
+    color: black; /* Ändra till vit för att matcha bakgrunden */
     transition: .5s;
 
 }
@@ -53,11 +53,16 @@
 }
 .navbar a {
     font-size: 18px;
-    color: white;
+    color: black; /* Ändra till vit för att matcha bakgrunden */
     text-decoration: none;
     font-weight: 500;
     margin-left: 30px;
     text-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: .1s ease;
+}
+.navbar a:hover {
+    color: #444;
+    text-decoration: none; /* Underline? */
 }
 /* Left section */
 .banner {
@@ -93,7 +98,7 @@
     transform: translateX(-100%);
     transition: 0s;
 }
-
+/* Left info section */
 .slide.active .left-info {
     transform: translateX(0);
     z-index: 1;
@@ -103,20 +108,35 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, .1);
-    backdrop-filter: blur(20px);
+    background: transparent;
+    /*background: rgba(255, 255, 255, .1);*/
+    /*backdrop-filter: blur(20px); */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    -webkit-mask: linear-gradient(#000 0 0),
+    /*-webkit-mask: linear-gradient(#000 0 0),
     linear-gradient(#000 0 0);
     -webkit-mask-clip: text, padding-box;
-    -webkit-mask-composite: xor;
+    -webkit-mask-composite: xor; */
     padding-right: 20px;
 }
 .penetrate-blur h1 {
     font-size: 250px;
     text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    color: white;
+    text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
 }
 /* Edit 2 till 4 om du ska ha 4 slides */
 .slide:nth-child(1) .penetrate-blur h1,
@@ -131,10 +151,12 @@
 }
 .content h3 {
     font-size: 20px;
+    color: black; /* Tabort om du vill */
 }
 .content p {
     font-size: 16px;
     margin: 10px 0 15px;
+    color: black; /* Tabort om du vill */
 }
 .content .btn {
     display: inline-block;
@@ -241,3 +263,168 @@
 .navigation span:nth-child(1):hover i {
     color: #444;
 }
+
+/*-------- paket-1 section ---------*/
+
+.paket-1-section {
+  display: flex;
+  margin-bottom: 7em;
+  gap: 10%;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.paket-1-right {
+    min-width: 50%;
+    max-width: 500px;
+    width: 100%;
+}
+.paket-1-left {
+  display: flex;
+  flex-shrink: 10;
+  
+}
+
+.paket-1-left-image {
+  max-width: 520px;
+  max-height: 574px;
+  width: 100%;
+  height: auto;
+}
+
+.paket-1-right-toptext {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size:16px;
+  width: 100%;
+  border-style:hidden;
+}
+
+.paket-1-right-title {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:36px;
+  line-height: auto;
+  max-width: 385px;;
+  margin-top: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+/*.paket-1-right-ingress {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  color:#534836;
+  font-size:16px;
+  line-height:26px;
+  margin-bottom: 2.5em;
+  max-width: 486px;
+} */
+.paket-1-right-card-title {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:16px;
+    line-height:26px;
+    margin-top: 1em;
+}
+.paket-1-right-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-right: 2%;
+}
+
+
+.paket-1-right-card-text {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  color:#534836;
+  font-size:16px;
+  line-height:26px;
+  max-width: 365px;
+}
+
+/* -------- Paket 2 ---------*/
+
+.paket-2-section {
+  display: flex;
+  margin-left: 12%;
+  margin-right: 10%;
+  margin-top: 5em;
+  margin-bottom: 7em;
+  gap: 5%;
+  justify-content: center;
+
+}
+
+.paket-2-left {
+  min-width: auto;
+}
+
+.paket-2-right {
+  display: flex;
+  flex-shrink: 10;
+  min-width: 50%;
+}
+
+.paket-2-right-image {
+  max-width: 1000px;
+  max-height: 574px;
+  width: 100%;
+  height: auto;
+}
+
+.paket-2-left-toptext {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size:16px;
+  max-width: 186px;
+  border-style:hidden;
+}
+
+.paket-2-left-title {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:36px;
+  line-height: auto;
+  max-width: 385px;;
+  margin-top: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+/*.paket-2-left-ingress {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  color:#534836;
+  font-size:16px;
+  line-height:26px;
+  margin-bottom: 2.5em;
+  max-width: 486px;
+} */
+
+.paket-2-left-card-title {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:16px;
+  line-height:26px;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+.paket-2-left-card-text {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size:16px;
+  line-height:26px;
+  max-width: 500px;
+}
+
