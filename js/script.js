@@ -12,16 +12,7 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.to(".nav-logo", {
-    rotation: 360,
-    duration: 2,
-  });
-  gsap.from(".nav-button", {
-    scale:1.2,
-    duration: 2,
-    ease: "bounce.out",
-  });
-  gsap.from(".peak-main-header-title", { x:600, duration: 1,
+  gsap.from(".peak-main-header-title", { x:500, duration: 1,
   });
 });
 
