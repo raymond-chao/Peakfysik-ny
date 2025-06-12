@@ -5,81 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/aafa7cdabb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/contact.css">
     <title>PeakFysik Kontakt</title>
 </head>
-<body class="body__header">
-    <header>
-        <nav>
-            <a href="../index.html">Hem</a>
-            <a href="about.html">Om PeakFysik</a>
-            <a href="offerings.html">Tjänster</a>
-            <a href="contact.html">Kontakta oss</a>
-            <img class="nav-logo" src="../img/logo.png" alt="Logo">
-        </nav>
-        <main class="contact-main">
-            <section class="peak-video">
-                <div class="text-wrapper">
-                    <div class="kontakta-text">
-                        <img src="../img/kontakta.svg" alt="kontakta" id="kontakta">
-                    </div>
-                    <div class="oss-text">
-                        <img src="../img/oss.svg" alt="oss" id="oss">
-                    </div>
-                </div>
-                <video autoplay muted loop playsinline class="responsive-video">
-                    <source src="../img/pf-video-ny.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </section>
+    <body>
+        <header class="header">
+            <a href="../index.html" class="logo">PeakFysik</a>
+            <div class="social-media">
+                <a href="https://www.facebook.com/people/PeakFysik/61571074644315/"><i class='bxl bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/peakfysik/"><i class='bxl bxl-instagram'></i> </a>
+                <a href="https://www.tiktok.com/@peak.fysik"><i class='bxl bxl-tiktok'></i> </a>
+            </div>
+
+            <nav class="navbar">
+                <a href="../index.html">Hem</a>
+                <a href="offerings.html">Tjänster</a>
+                <a href="./about.html">Om</a>
+                <a href="./contact.html">Kontakt</a>
+            </nav>
         </header>
-        <section class="contact-top-section">
-            <div class="contact-top-section-left">
-                <h1 class="contact-top-section-left-title">Kontakta oss</h1>
-                <p class="contact-top-section-left-text">Our favorite brands are our friends! We help them to achieve their goals, they help us to stay sharp.</p>
-            </div>
-            <div class="contact-top-section-right">
-                <div class="contact-top-section-right-form">
-                    <form action="#submit">
-                        <div class="contact-top-section-right-form-label">
-                            <label for="name" class="label">Name</label>
-                            <input type="text" name="name" id="name" class="input-field" required>
+        <main>
+            <section>
+                <div class="about-container">
+                    <div class="list">
+                        <div class="item">
+                            <div class="content">
+                                <video autoplay muted loop playsinline class="responsive-video">
+                                    <source src="../img/pf-video-ny.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="title"><img src="../img/kontaktany.svg" alt="kontakta text" id="kontakta"></div>
+                                    <div class="topic"><img src="../img/ossny.svg" alt="oss text" id="oss"></div>
+                            </div>
                         </div>
-                        <div class="contact-top-section-right-form-label">
-                            <label for="email" class="label">Email</label>
-                            <input type="email" name="email" id="email" class="input-field" required>
-                        </div>
-                        <div class="contact-top-section-right-form-label">
-                            <label for="message" class="label">Message</label>
-                            <input type="text" name="message" id="message" class="input-field" required>
-                        </div>
-                        <div class="contact-top-section-right-form-button">
-                            <button type="submit" class="btn">Submit</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </section>
+        </main>
+        <section class="contact">
+            <h2>Kontakta oss</h2>
+
+
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Namn" id="name"
+                        class="item"
+                        autocomplete="off">
+                        <div class="error-txt">Namn kan inte vara blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="E-post" id="email"
+                        class="item"
+                        autocomplete="off">
+                        <div class="error-txt email">E-post kan inte vara blank</div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Telefonnummer" id="number"
+                        class="item"
+                        autocomplete="off">
+                        <div class="error-txt">Telefonnummer kan inte vara blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Ämne" id="subject"
+                        class="item"
+                        autocomplete="off">
+                        <div class="error-txt"> Ämne kan inte vara blank</div>
+                    </div>
+                </div>
+                <div class="textarea-field field">
+                    <textarea name="" id="message" cols="30" rows="10"
+                    placeholder="Ditt Meddelande" class="item"
+                    autocomplete="off"></textarea>
+                    <div class="error-txt"> Meddelande kan inte vara blank</div>
+                </div>
+
+                <button type="submit">Skicka</button>
+            </form>
+
         </section>
-        <section class="contact-map-section">
-            <div class="contact-map-section-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4264.424473690042!2d11.963728577199737!3d57.69586394068391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36d870257b7%3A0x173525c15935353!2sFighter%20Centre!5e0!3m2!1sen!2sse!4v1749477946465!5m2!1sen!2sse" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-    </main>
     <footer class="footer-main">
         <div class="footer-main-container">
             <a href="index.html"><p class="footer-main-logo">PEAK FYSIK</p></a>
             <p class="footer-main-slogan">BLI BÄTTRE IDAG</p>
             <div class="footer-main-socials">
-                <a href="https://www.facebook.com/people/PeakFysik/61571074644315/"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/peakfysik/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@peak.fysik"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/PeakFysik/61571074644315/"><i class='bxl bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/peakfysik/"><i class='bxl bxl-instagram'></i> </a>
+                <a href="https://www.tiktok.com/@peak.fysik"><i class='bxl bxl-tiktok'></i> </a>
             </div>
         </div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/contact.js"></script>
 </body>
 </html>

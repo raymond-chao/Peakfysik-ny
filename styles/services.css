@@ -143,22 +143,22 @@
 .slide:nth-child(2) .penetrate-blur h1{
     margin-right: -10px;
 }
-.left-info .content {
+.left-info .content1 {
     position: absolute;
     bottom: 8%;
     left: 10%;
     color: white;
 }
-.content h3 {
+.content1 h3 {
     font-size: 20px;
-    color: black; /* Tabort om du vill */
+    color: white; /* Tabort om du vill */
 }
-.content p {
+.content1 p {
     font-size: 16px;
     margin: 10px 0 15px;
-    color: black; /* Tabort om du vill */
+    color: white; /* Tabort om du vill */
 }
-.content .btn {
+.content1 .btn1 {
     display: inline-block;
     padding: 13px 20px;
     background: white;
@@ -171,10 +171,43 @@
     font-weight: 600;
     transition: .5s;
 }
-.content .btn:hover {
+.content1 .btn1:hover {
     background: transparent;
     color: white;
 }
+.left-info .content2 {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    color: white;
+}
+.content2 h3 {
+    font-size: 20px;
+    color: black; /* Tabort om du vill */
+}
+.content2 p {
+    font-size: 16px;
+    margin: 10px 0 15px;
+    color: black; /* Tabort om du vill */
+}
+.content2 .btn2 {
+    display: inline-block;
+    padding: 13px 20px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s;
+}
+.content2 .btn2:hover {
+    background: transparent;
+    color: white;
+}
+
 
 /* Right section */
 .slide .right-info {
@@ -427,4 +460,50 @@
   line-height:26px;
   max-width: 500px;
 }
+
+/* Footer */
+.footer-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-main a {
+    text-decoration: none;
+} 
+/*   
+.footer-main:hover {
+    transform: scale(1.2);
+} */
+
+.footer-main-logo {
+    font-size: 24px;
+    font-style: bold;
+    letter-spacing: 3.36px;
+    margin-bottom: 0.3em;
+    color: black; 
+}
+
+.footer-main-slogan {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    margin-bottom: 1em;
+}
+
+.footer-main-socials {
+    display: flex;
+    gap: 1.5em;
+    color: black;
+}
+.footer-main-socials a {
+    color: black;
+    font-size: 30px;
+}
+.footer-main-socials a:hover {
+    transform: scale(1.3);
+}
+
 
