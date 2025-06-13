@@ -16,8 +16,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   gsap.from(".peak-main-logo", { x:900, duration: 1.5,
   });

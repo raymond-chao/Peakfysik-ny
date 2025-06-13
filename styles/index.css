@@ -497,7 +497,7 @@
     }
 
     .offerings-section-button a {
-        width: 100%; /* Make the button full-width */
+        width: 90%; /* Make the button full-width */
         margin-bottom: 5px;
     }
 }
