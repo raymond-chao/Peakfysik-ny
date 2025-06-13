@@ -1,15 +1,22 @@
-let logo = document.getElementById('logo');
-let bild = document.getElementById('bild1');
-let maintext = document.querySelector('maintext');
-let title = document.getElementById('title'); // Corrected line
+const scroll = document.getElementById('scrolls');
 
 window.addEventListener('scroll', () => {
-    let value = window.scrollY;
+    const value = window.scrollY;
 
-    //title.style.marginTop = value * 2.5 + 'px'; //
-    maintext.style.marginTop = value * 2.5 + 'px';
-    bild.style.top = value * -1.5 + 'px';
+    // Move it
+    scroll.style.transform = `translate(-50%, ${value * 0.5}px)`;
+
+    // Hide it after scrolling past 100vh (adjust as needed)
+    if (value > window.innerHeight * 1) {
+        scroll.style.opacity = '0';
+        scroll.style.pointerEvents = 'none';
+    } else {
+        scroll.style.opacity = '1';
+        scroll.style.pointerEvents = 'auto';
+    }
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   gsap.from(".peak-main-logo", { x:900, duration: 1.5,
