@@ -517,3 +517,128 @@
 .footer-text {
     color: var(--color-text-dark);
 }
+
+/* ===== Media Queries for Responsiveness ===== */
+
+/* For tablets and smaller (e.g., up to 1024px wide) */
+@media (max-width: 1024px) {
+    
+    /* --- Header & Navigation --- */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.9); /* Add a background for readability */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .social-media {
+        margin: 0;
+    }
+
+    /* --- Hero Slider Section --- */
+    /* Make the left side take up the full width */
+    .slide .left-info {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Add a slight overlay to ensure text is readable */
+    }
+
+    /* Hide the right-side decorative text */
+    .slide .right-info {
+        display: none;
+    }
+
+    /* Center the content box and make it wider */
+    .slide .left-info .content1,
+    .slide .left-info .content2 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+    }
+    
+    /* Make the huge background text smaller */
+    .penetrate-blur h1 {
+        font-size: 20vw; /* Use viewport width for responsive sizing */
+        opacity: 0.5;
+    }
+    
+    /* Center the navigation buttons */
+    .navigation {
+        right: 50%;
+        transform: translateX(50%);
+        width: auto;
+    }
+
+    /* --- Package Sections --- */
+    /* Make the sections stack vertically */
+    .paket-1-section,
+    .paket-2-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        margin: 3em 5%; /* Reduce side margins */
+    }
+    
+    /* NEW RULE: Reverse the stacking order for Paket 2 */
+    .paket-2-section {
+        flex-direction: column-reverse;
+    }
+    
+    /* Reset all the desktop-specific sizing and spacing */
+    .paket-1-right,
+    .paket-2-left,
+    .paket-1-left,
+    .paket-2-right {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+    }
+}
+
+
+/* For mobile phones (e.g., up to 600px wide) */
+@media (max-width: 600px) {
+
+    /* --- Header & Navigation --- */
+    .logo {
+        font-size: 24px;
+    }
+    .navbar a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    /* --- Hero Slider Section --- */
+    .slide .left-info .content1,
+    .slide .left-info .content2 {
+        bottom: 15%; /* Move content up to be above navigation */
+    }
+
+    .penetrate-blur h1 {
+        font-size: 25vw;
+    }
+    
+    .navigation {
+        bottom: 5%;
+    }
+
+    /* --- Package Sections --- */
+    .paket-1-section,
+    .paket-2-section {
+        margin: 2em 5%;
+    }
+
+    .paket-1-right-title,
+    .paket-2-left-title {
+        font-size: 28px;
+    }
+
+    .paket-1-right-card,
+    .paket-2-left-card {
+        gap: 1em;
+    }
+}
