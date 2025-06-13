@@ -455,6 +455,9 @@
 
 /* For mobile phones (e.g., up to 576px wide) */
 @media (max-width: 576px) {
+    .peak-main-background {
+        transform: translate(-50%, -105%); 
+    }
 
     /* --- Header & Navigation --- */
     .logo {
@@ -470,7 +473,7 @@
     .peak-main-container {
         padding-top: 180px;
         margin-bottom: 50px;
-        height: 100vh;
+        height: 100dvh;
     }
 
     .svg-image-container .peak-main-logo {
@@ -499,6 +502,6 @@
 
     .offerings-section-button a {
         width: 90%; /* Make the button full-width */
-        margin-bottom: 5px;
+        margin-bottom: 50px;
     }
 }

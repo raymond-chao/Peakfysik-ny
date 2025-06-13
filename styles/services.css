@@ -547,6 +547,9 @@
     .slide .right-info {
         display: none;
     }
+    .penetrate-blur h1 {
+        display: none;
+    }
 
     /* Center the content box and make it wider */
     .slide .left-info .content1,
