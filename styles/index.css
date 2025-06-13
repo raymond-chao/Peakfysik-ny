@@ -1,10 +1,21 @@
+/* ===== Global Styles & Variables ===== */
+:root {
+    --color-primary: rgb(255, 196, 0);
+    --color-primary-hover: orange;
+    --color-background-dark-rgba: #232323db;
+    --color-text-light: #ffffff;
+    --color-text-dark: #000000;
+    --color-text-hover: #444;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'montserrat', sans-serif;
 }
-/* Navigation */
+
+/* ===== Header & Navigation ===== */
 .header {
     position: fixed;
     top: 0;
@@ -19,13 +30,15 @@
 
 .logo {
     font-size: 30px;
-    color: white; /* Ändra till vit för att matcha bakgrunden */
+    color: var(--color-text-light);
     text-decoration: none;
     font-weight: 700;
 }
+
 .social-media {
     margin: 0 auto 0 50px;
 }
+
 .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -33,38 +46,46 @@
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid White; /* Ändra till vit för att matcha bakgrunden */
+    border: 2px solid var(--color-text-light);
     border-radius: 6px;
     text-decoration: none;
     margin-right: 10px;
     transition: .5s;
 }
+
 .social-media a:hover {
-    background: white;
+    background: var(--color-text-light);
 }
+
 .social-media a i {
     font-size: 20px;
-    color: white; /* Ändra till vit för att matcha bakgrunden */
+    color: var(--color-text-light);
     transition: .5s;
+}
 
+.social-media a:hover i {
+    color: var(--color-text-hover);
 }
-.social-media a i:hover {
-    color: #444;
-}
+
 .navbar a {
     font-size: 18px;
-    color: white; /* Ändra till vit för att matcha bakgrunden */
+    color: var(--color-text-light);
     text-decoration: none;
     font-weight: 500;
     margin-left: 30px;
     text-shadow: 0 0 10px rgba(0, 0, 0, .2);
     transition: .1s ease;
 }
+
 .navbar a:hover {
-    color: #444;
-    text-decoration: none; /* Underline? */
+    color: var(--color-text-hover);
 }
-/* Peak Main */
+
+/* ===== Hero Section ===== */
+.peak-main-header {
+    /* This is the outer container for the hero section */
+}
+
 .peak-main-background {
     position: relative;
     display: flex;
@@ -76,8 +97,6 @@
 
 .peak-main-background-image {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -96,15 +115,16 @@
     margin-bottom: 100px;
 }
 
-.peak-main-header-title {   
+.peak-main-header-title {
     font-family: "Poppins", sans-serif;
     position: absolute;
     font-size: 5em;
-    color: rgb(255, 196, 0);
+    color: var(--color-primary);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 }
 
-.peak-main-container img {
+/* This rule from your original seems to target a parallax effect image */
+.peak-main-background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -113,11 +133,34 @@
     pointer-events: none;
     z-index: 0;
 }
+.peak-main-container {
+  position: relative; /* make sure this is relative */
+}
+
+.svg-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.peak-main-logo {
+  width: 150px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
 
 
 .peak-main-button {
-    background-color: rgb(255, 196, 0);
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     font-size: 20px;
     padding: 20px;
     border-radius: 1px;
@@ -127,20 +170,19 @@
     transition: all 0.3s ease;
 }
 
-/* Peak Main Scroll */
+/* Scroll Down Prompt */
 .header-main-peak-section-scroll {
-    position: absolute;    /* if you want to position it at bottom */
-    bottom: 30%;          /* adjust vertical position */
-    left: 50%;             /* horizontally center */
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
     transform: translateX(-50%);
-    color: #ffffff;
+    color: var(--color-text-light);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 10;
 }
-
 
 .header-main-peak-section-scroll-text {
     font-family: "PT Serif", serif;
@@ -149,22 +191,23 @@
     line-height: 26px;
     letter-spacing: 2.8px;
 }
+
 .header-main-peak-section-scroll a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-text-light);
     font-weight: 700;
     font-size: 40px;
     margin-top: 10px;
 }
 
-/* Peak offerings */
+/* ===== Offerings Section (Original Layout Preserved) ===== */
 .offerings-section {
     font-style: normal;
     color: #E8E8E8;
     line-height: 26px;
     font-size: 20px;
 }
-    
+
 .offerings-section-background-1 {
     min-height: 700px;
     max-width: none;
@@ -178,18 +221,18 @@
     gap: 4em;
     padding-right: 50%;
 }
-    
+
 .offerings-section-background-1-container {
     font-family: "PT Serif", serif;
     margin-top: 20%;
     margin-bottom: 20%;
-    background-color: #232323db;
+    background-color: var(--color-background-dark-rgba);
     max-width: 543px;
     width: 100%;
     height: 374px;
     margin-left: 30%;
 }
-        
+
 .offerings-section-background-2 {
     min-height: 700px;
     max-width: none;
@@ -203,77 +246,106 @@
     gap: 4em;
     padding-left: 50%;
 }
-    
+
 .offerings-section-background-2-container {
     font-family: "PT Serif", serif;
     margin-top: 20%;
     margin-bottom: 10%;
-    background-color: #232323da;
+    background-color: var(--color-background-dark-rgba);
     max-width: 543px;
     width: 100%;
     height: 374px;
     margin-right: 10%;
 }
-    
+
 .offerings-section-offer {
-    color: #ffffff;
+    color: var(--color-text-light);
     letter-spacing: 1.5px;
     font-weight: 400;
     margin-top: 2em;
     margin-left: 2.4em;
 }
-    
+
 .offerings-section-title {
-    color: #ffffff;
+    color: var(--color-text-light);
     font-weight: 400;
     margin-top: 1em;
     margin-left: 2em;
 }
-    
+
 .offerings-section-text {
-    color: #ffffff;
+    color: var(--color-text-light);
     margin-top: 1em;
     font-weight: 300;
     font-size: 16px;
     max-width: 508px;
     min-height: 78px;
-    margin-left: 2em; 
-    margin-right: 2em;  
+    margin-left: 2em;
+    margin-right: 2em;
 }
-    
+
 .offerings-section-button {
     margin-top: 2em;
     margin-left: 1em;
 }
-    
-.button-offerings {
-    background-color: rgb(255, 196, 0);
-    color: #ffffff;
+.offerings-section-button a {
+    margin-top: 2em;
+    margin-left: 1em;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-family: 'Montserrat, sans-serif';
+    letter-spacing: 1.4px;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1em;
+    position: relative;
+    border: none;
+    height: 63px;
+    width: 228px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;  /* remove underline */
+    cursor: pointer;
+    box-sizing: border-box; /* to include padding in size */
+}
+
+.offerings-section-button a:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-primary-hover);
+}
+
+
+/*.button-offerings {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     font-style: normal;
-    font-size: 100;
     letter-spacing: 1.4px;
     line-height: 26px;
     font-size: 14px;
+    font-weight: 100;
     padding: 1em;
     position: relative;
     border: none;
     height: 63px;
     width: 228px;
 }
+
 .button-offerings:hover {
-    color:white;
-    background-color: orange;
+    color: var(--color-text-light);
+    background-color: var(--color-primary-hover);
     cursor: pointer;
 }
-
+*/
+/* ===== Footer ===== */
 .footer-main {
-    color: black;
+    color: var(--color-text-dark);
     display: flex;
     justify-content: center;
     line-height: 26px;
     min-height: 271px;
 }
-/* Footer */
+
 .footer-main-container {
     display: flex;
     flex-direction: column;
@@ -281,22 +353,19 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin-top: 30px;
 }
 
 .footer-main a {
     text-decoration: none;
-} 
-/*   
-.footer-main:hover {
-    transform: scale(1.2);
-} */
+}
 
 .footer-main-logo {
     font-size: 24px;
     font-style: bold;
     letter-spacing: 3.36px;
     margin-bottom: 0.3em;
-    color: black; 
+    color: var(--color-text-dark);
 }
 
 .footer-main-slogan {
@@ -308,16 +377,122 @@
 .footer-main-socials {
     display: flex;
     gap: 1.5em;
-    color: black;
+    color: var(--color-text-dark);
 }
+
 .footer-main-socials a {
-    color: black;
+    color: var(--color-text-dark);
     font-size: 30px;
 }
+
 .footer-main-socials a:hover {
     transform: scale(1.3);
 }
 
 .footer-text {
-    color: white;
+    color: var(--color-text-dark);
+}
+
+/* ===== Media Queries for Responsiveness (REVISED & FIXED) ===== */
+
+/* For tablets and smaller (e.g., up to 992px wide) */
+@media (max-width: 992px) {
+    
+    /* --- Header & Navigation --- */
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background: rgba(0, 0, 0, .1);
+    }
+
+    .social-media {
+        margin: 0;
+    }
+    
+    /* --- Hero Section Elements --- */
+    .svg-image-container .peak-main-logo {
+        width: 250px;
+    }
+
+    .header-main-peak-section-scroll {
+        bottom: 20%;
+    }
+
+    /* --- Offerings Section --- */
+    .offerings-section-background-1,
+    .offerings-section-background-2 {
+        /* 1. Remove the desktop padding that creates the offset layout */
+        padding: 0;
+        min-height: auto; /* Let the content determine the height */
+        display: block; /* Ensure it's a simple block element */
+        padding: 50px 0; /* Add vertical spacing */
+    }
+
+    .offerings-section-background-1-container,
+    .offerings-section-background-2-container {
+        /* 2. This is the new, simple, and robust centering method */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0; /* Reset desktop vertical margins */
+        margin-bottom: 0;
+        
+        /* 3. Define the size and prevent it from touching the edges */
+        max-width: 543px; /* Keep the max-width */
+        width: 90%;     /* Make it responsive, 90% of the screen width */
+        height: auto;   /* Allow height to grow with its content */
+    }
+        .offerings-section-button a {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* For mobile phones (e.g., up to 576px wide) */
+@media (max-width: 576px) {
+
+    /* --- Header & Navigation --- */
+    .logo {
+        font-size: 26px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    /* --- Hero Section --- */
+    .peak-main-container {
+        padding-top: 180px;
+        margin-bottom: 50px;
+    }
+
+    .svg-image-container .peak-main-logo {
+        width: 180px;
+    }
+
+    .header-main-peak-section-scroll {
+        bottom: 15%;
+    }
+
+    /* --- Offerings Section --- */
+    .offerings-section-background-1-container,
+    .offerings-section-background-2-container {
+        /* Center all the text and buttons inside the card for a clean mobile look */
+        text-align: center;
+    }
+    
+    /* Remove specific side margins from elements inside the card */
+    .offerings-section-offer,
+    .offerings-section-title,
+    .offerings-section-text,
+    .offerings-section-button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .offerings-section-button a {
+        width: 100%; /* Make the button full-width */
+        margin-bottom: 5px;
+    }
 }
