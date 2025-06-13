@@ -279,4 +279,81 @@
     transform: scale(1.3);
 }
 
+/* ===== Media Queries for Responsiveness (FINAL & FIXED) ===== */
 
+/* For tablets and smaller (e.g., up to 1024px wide) */
+@media (max-width: 1024px) {
+    /* --- Header & Navigation --- */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.1); /* Add a background for readability */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .social-media {
+        margin: 0;
+    }
+
+    /* --- Hero Section --- */
+    /* REMOVED the problematic padding-top from here */
+    .about-container .list .item .content {
+        padding-right: 0;
+        max-width: 90%;
+        text-align: center;
+        /* FIX: Push the content down to clear the header, instead of padding the container */
+        top: 30%; 
+    }
+
+    .about-container .list .item .content .buttons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Footer --- */
+    .footer-main {
+        background-color: #f4f4f4;
+        padding: 40px 20px;
+    }
+}
+
+
+/* For mobile phones (e.g., up to 768px wide) */
+@media (max-width: 768px) {
+    /* --- Hero Section --- */
+    .about-container .list .item .content {
+        /* FIX: Push the content down even more on taller, narrower screens */
+        top: 35%; 
+    }
+
+    .about-container .list .item .title,
+    .about-container .list .item .topic {
+        font-size: 2em; /* Further reduce font size */
+        line-height: 1.2em;
+    }
+
+    .about-container .list .item .author {
+        letter-spacing: 3px;
+    }
+
+    /* Stack the buttons vertically on phones */
+    .about-container .list .item .content .buttons {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 40px);
+        width: 180px;
+    }
+
+    /* --- About Me Section --- */
+    .about-next-section {
+        padding: 4em 5%; /* Add side padding */
+    }
+
+    .header-about {
+        font-size: 2.2rem;
+    }
+
+    .about-me-text p {
+        font-size: 16px;
+    }
+}
