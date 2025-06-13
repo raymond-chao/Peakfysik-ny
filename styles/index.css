@@ -470,6 +470,7 @@
     .peak-main-container {
         padding-top: 180px;
         margin-bottom: 50px;
+        height: 100vh;
     }
 
     .svg-image-container .peak-main-logo {
