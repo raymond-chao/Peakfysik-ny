@@ -95,6 +95,72 @@ body {
     color: var(--color-text-hover);
 }
 
+/* ===== Media Queries for Responsiveness ===== */
+
+/* For tablets and smaller mobile devices (e.g., up to 768px wide) */
+@media (max-width: 768px) {
+
+    /* --- Header & Navigation on Tablets & Phones --- */
+    .header {
+        /* Change layout to stack elements vertically */
+        flex-direction: column;
+        
+        /* Adjust padding for a more compact look */
+        padding: 20px 5%;
+        
+        /* Add a gap between the stacked logo, nav, and social icons */
+        gap: 20px;
+
+        /* Give the header a solid background when stacked to hide content scrolling behind it */
+        background-color: var(--color-background);
+    }
+
+    .navbar {
+        /* Ensure the navbar links are centered as a group */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar a {
+        /* Reduce spacing between navigation links */
+        margin: 0 15px;
+    }
+
+    .social-media {
+        /* Reset the margin that was used to push elements apart on desktop */
+        margin: 0;
+    }
+}
+
+
+/* For small mobile phones (e.g., up to 480px wide) */
+@media (max-width: 480px) {
+
+    /* --- Header & Navigation on Small Phones --- */
+    .logo {
+        /* Make the logo slightly smaller */
+        font-size: 26px;
+    }
+
+    .navbar a {
+        /* Further reduce font size and spacing for very narrow screens */
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .social-media a {
+        /* Make the social media icons smaller */
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-media a i {
+        /* Adjust the icon size to fit the new button size */
+        font-size: 18px;
+    }
+}
+
 /* ===== Hero Section (Video & SVG) ===== */
 .about-container {
     position: relative;
@@ -118,13 +184,18 @@ body {
 .content .title,
 .content .topic {
     position: absolute;
+    left: 50%;
+    top: 50%;
     z-index: 10;
     margin: 0;
-    padding: 0;
+}
+
+.content .title {
+    transform: translate(-50%, -110%);
 }
 
 .content .topic {
-    margin-top: 10%;
+    transform: translate(-50%, 10%);
 }
 
 .content img {
@@ -134,6 +205,86 @@ body {
 #kontakta, #oss {
     position: relative;
 }
+
+/* ===== Media Queries for Responsiveness ===== */
+
+/* --- Hero Section on Tablets & Phones (FIXED) --- */
+
+/* For tablets and smaller (e.g., up to 768px wide) */
+@media (max-width: 768px) {
+    .about-container {
+        margin-top: 100px;
+    }
+    /* Make the .content container smaller than the full screen */
+    .content {
+        width: 90vw; /* 90% of the viewport width */
+        height: 50vh; /* 50% of the viewport height */
+        border-radius: 15px; /* Add rounded corners for a cleaner look */
+        overflow: hidden; /* Clips content to the rounded corners */
+    }
+
+    /* FIX #2: Make the entire video visible instead of cropping it */
+    .responsive-video {
+        height: 100%; /* Full height of the .content container */
+        object-fit: contain; /* This will show the whole video, possibly with black bars */
+    }
+
+    /* FIX #1: Properly center the images within their containers */
+    .content .title,
+    .content .topic {
+        width: 100%; /* Make the container div span the full parent width */
+        width: 170px;
+        display: flex; /* Use flexbox for easy centering */
+        justify-content: center; /* Center the image horizontally */
+    }
+
+    /* Reduce the size of the SVG text images to fit inside the smaller container */
+    .content img {
+        width: 75%;
+        max-width: 450px;
+    }
+
+    /* Adjust the vertical spacing of the text */
+    .content .title {
+        transform: translate(-50%, -105%); 
+    }
+
+    .content .topic {
+        transform: translate(-50%, 5%);
+    }
+}
+
+
+/* For small mobile phones (e.g., up to 480px wide) */
+@media (max-width: 480px) {
+    .about-container {
+        margin-top: 180px;
+    }
+    .responsive-video {
+        height: 100%; /* Full height of the .content container */
+        object-fit: contain; /* Show the whole video, possibly with black bars */
+    }
+    /* You can keep the .content size or adjust it further if needed */
+    .content {
+        height: 100vh; /* Make it slightly shorter on very small screens */
+    }
+    
+    /* Make the images a bit smaller relative to the container */
+    .content img {
+        width: 70%;
+    }
+
+    /* Fine-tune the vertical separation for the narrowest screens */
+    .content .title {
+        transform: translate(-50%, -110%);
+    }
+
+    .content .topic {
+        transform: translate(-50%, 10%);
+    }
+}
+
+
 /* ===== Contact Form Section ===== */
 .contact {
     display: flex;
