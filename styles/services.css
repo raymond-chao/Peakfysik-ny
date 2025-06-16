@@ -617,6 +617,10 @@
         max-width: 500px;
         text-align: center;
     }
+    .content2 p, .content2 h3 {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
     
     /* Make the huge background text smaller */
     .penetrate-blur h1 {
