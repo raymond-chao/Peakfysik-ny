@@ -455,9 +455,6 @@
 
 /* For mobile phones (e.g., up to 576px wide) */
 @media screen and (max-width: 700px) {
-    .peak-main-background {
-        transform: translate(-50%, -105%); 
-    }
     .peak-main-background-image {
         bottom: 0;
         top: 0;

@@ -379,12 +379,12 @@
 .paket-1-right-card {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    margin-right: 2%;
-    margin: 0;
+    gap: 8px;               /* Adjust this value (e.g., 5px, 8px, 10px) to control space BETWEEN items */
     padding: 0;
-
+    margin: 0;
 }
+
+
 
 .paket-1-right-card-title {
     font-family: var(--font-secondary);
@@ -408,11 +408,16 @@
     line-height: 26px;
     width: 100%;
     margin-top: 0;
-    margin-bottom: 0.4em;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+.paket-1-right-card {
+    gap: 5px;
 }
 
-.paket-1-right-card p {
-    margin-top: 0;
+.paket-1-right-card > p {
+    margin: 0;
+    padding: 0;
 }
 
 .paket-2-left-card a, .paket-1-right-card a {
