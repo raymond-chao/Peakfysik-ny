@@ -578,16 +578,26 @@
 
     /* --- Hero Slider Section --- */
     /* Make the left side take up the full width */
-    .slide-img-2, .slide-img-1 {
-        display: none;
-    }
-    .slide .left-info {
+    /* Example logic based on slide number (or JS state if available) */
+.slide:nth-child(1) .left-info {
+    background-image: url(../img/peak-bild1-mini.jpg);
+}
+
+.slide:nth-child(2) .left-info {
+    background-image: url(../img/yogablock-mini.jpg);
+}
+
+.slide .left-info {
         width: 100%;
-        background: rgba(0, 0, 0, 0.3); /* Add a slight overlay to ensure text is readable */
-        background-image: url(../img/peak-bild1-mini.jpg);
+        height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        background-color: rgba(0, 0, 0, 0.3); /* Optional overlay */
+    }
+
+    .slide-img-2, .slide-img-1 {
+        display: none;
     }
 
     /* Hide the right-side decorative text */
