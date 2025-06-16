@@ -340,6 +340,10 @@
 .paket-1-left {
     display: flex;
     flex-shrink: 10;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .paket-1-left-image {
@@ -406,6 +410,11 @@
     margin-top: 0;
     margin-bottom: 0.4em;
 }
+
+.paket-1-right-card p {
+    margin-top: 0;
+}
+
 .paket-2-left-card a, .paket-1-right-card a {
     display: inline-block;
     padding: 13px 20px;
@@ -452,7 +461,8 @@
 .paket-2-right {
     display: flex;
     flex-shrink: 10;
-    min-width: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .paket-2-right-image {
