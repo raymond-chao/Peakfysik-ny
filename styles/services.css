@@ -348,7 +348,9 @@
     width: 100%;
     height: auto;
 }
-
+.paket-1-right {
+    text-align: center;
+}
 .paket-1-right-toptext {
     font-family: var(--font-secondary);
     font-weight: 500;
@@ -356,6 +358,7 @@
     font-size: 16px;
     width: 100%;
     border-style: hidden;
+    text-align: center;
 }
 
 .paket-1-right-title {
@@ -364,8 +367,7 @@
     font-style: normal;
     font-size: 36px;
     line-height: auto;
-    max-width: 385px;
-    ;
+    width: 100%;
     margin-top: 0.3em;
     margin-bottom: 0.8em;
 }
@@ -375,6 +377,9 @@
     flex-direction: column;
     gap: 2em;
     margin-right: 2%;
+    margin: 0;
+    padding: 0;
+
 }
 
 .paket-1-right-card-title {
@@ -384,7 +389,11 @@
     font-size: 16px;
     line-height: 26px;
     margin-top: 1em;
+    margin-bottom: 1px;
 }
+
+
+
 
 .paket-1-right-card-text {
     font-family: var(--font-secondary);
@@ -393,8 +402,36 @@
     color: var(--color-text-subtle);
     font-size: 16px;
     line-height: 26px;
-    max-width: 365px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0.4em;
 }
+.paket-2-left-card a, .paket-1-right-card a {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: var(--color-text-hover);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+    margin-top: 1em; /* Optional: adds space above the button */
+
+    width: auto; /* Prevents full-width stretching */
+    text-align: center;
+    align-self: center; /* Works if parent uses flex */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paket-2-left-card a:hover, .paket-1-right-card a:hover  {
+    background: transparent;
+    color: var(--color-text-light);
+}
+
 
 /* ===== Package 2 Section (Original Layout Preserved) ===== */
 .paket-2-section {
@@ -409,6 +446,7 @@
 
 .paket-2-left {
     min-width: auto;
+    text-align: center;
 }
 
 .paket-2-right {
@@ -429,7 +467,7 @@
     font-weight: 500;
     font-style: normal;
     font-size: 16px;
-    max-width: 186px;
+    width: 100%;
     border-style: hidden;
 }
 
@@ -439,8 +477,7 @@
     font-style: normal;
     font-size: 36px;
     line-height: auto;
-    max-width: 385px;
-    ;
+    width: 100%;
     margin-top: 0.3em;
     margin-bottom: 0.8em;
 }
@@ -462,6 +499,9 @@
     font-size: 16px;
     line-height: 26px;
     max-width: 500px;
+}
+.paket-2-left-card {
+    text-align: center;
 }
 
 /* ===== Footer ===== */
@@ -528,7 +568,7 @@
         flex-direction: column;
         gap: 15px;
         padding: 15px;
-        background: rgba(255, 255, 255, 0.9); /* Add a background for readability */
+        background: rgba(0, 0, 0, .1); /* Add a background for readability */
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
@@ -538,9 +578,16 @@
 
     /* --- Hero Slider Section --- */
     /* Make the left side take up the full width */
+    .slide-img-2, .slide-img-1 {
+        display: none;
+    }
     .slide .left-info {
         width: 100%;
         background: rgba(0, 0, 0, 0.3); /* Add a slight overlay to ensure text is readable */
+        background-image: url(../img/peak-bild1-mini.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     /* Hide the right-side decorative text */
@@ -569,11 +616,15 @@
     
     /* Center the navigation buttons */
     .navigation {
-        right: 50%;
+        right: 10%;
+        top: 89%;
+        display: flex;
+        align-items: center;
         transform: translateX(50%);
         width: auto;
-    }
+        bottom: 30;
 
+    }
     /* --- Package Sections --- */
     /* Make the sections stack vertically */
     .paket-1-section,
@@ -643,5 +694,15 @@
     .paket-1-right-card,
     .paket-2-left-card {
         gap: 1em;
+    }
+    .navigation {
+        right: 50%;
+        top: 89%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        bottom: 0;
+
     }
 }

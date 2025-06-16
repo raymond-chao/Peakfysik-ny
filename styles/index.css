@@ -401,7 +401,7 @@
 /* ===== Media Queries for Responsiveness (REVISED & FIXED) ===== */
 
 /* For tablets and smaller (e.g., up to 992px wide) */
-@media (max-width: 992px) {
+@media screen and (max-width: 1170px) {
     
     /* --- Header & Navigation --- */
     .header {
@@ -454,9 +454,13 @@
 
 
 /* For mobile phones (e.g., up to 576px wide) */
-@media (max-width: 576px) {
+@media screen and (max-width: 700px) {
     .peak-main-background {
         transform: translate(-50%, -105%); 
+    }
+    .peak-main-background-image {
+        bottom: 0;
+        top: 0;
     }
 
     /* --- Header & Navigation --- */

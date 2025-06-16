@@ -362,7 +362,7 @@ form button:hover {
 /* ===== Media Queries for Responsiveness ===== */
 
 /* For tablets and smaller mobile devices (e.g., up to 768px wide) */
-@media (max-width: 768px) {
+@media screen and (max-width: 1170px) {
 
     /* --- Header & Navigation on Tablets & Phones --- */
     .header {
@@ -429,7 +429,7 @@ form button:hover {
 /* --- Hero Section on Tablets & Phones (FIXED) --- */
 
 /* For tablets and smaller (e.g., up to 768px wide) */
-@media (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .about-container {
         margin-top: 100px;
     }

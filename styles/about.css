@@ -283,7 +283,7 @@ body {
 /* ===== Media Queries for Responsiveness (FINAL & FIXED) ===== */
 
 /* For tablets and smaller (e.g., up to 1024px wide) */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1170px) {
     /* --- Header & Navigation --- */
     .header {
         flex-direction: column;
@@ -314,14 +314,13 @@ body {
 
     /* --- Footer --- */
     .footer-main {
-        background-color: #f4f4f4;
         padding: 40px 20px;
     }
 }
 
 
 /* For mobile phones (e.g., up to 768px wide) */
-@media (max-width: 768px) {
+@media screen and (max-width: 700px) {
     /* --- Hero Section --- */
     .about-container .list .item .content {
         /* FIX: Push the content down even more on taller, narrower screens */
