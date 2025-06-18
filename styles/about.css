@@ -791,10 +791,10 @@ body.no-scroll {
     }
 
     .about-container .list .item .content .buttons {
-        margin-left: auto;
+        margin-left: 0;
         margin-right: auto;
     }
-    
+
 
     /* --- About Me Section --- */
     .about-next-section {
