@@ -86,17 +86,12 @@ body.no-scroll {
 /* Displayed by default on large screens */
 /* ========================================================= */
 .header-desktop {
-    background-color: transparent;
     padding: 30px 5%;
     display: flex; /* Show by default on desktop */
     align-items: center;
     justify-content: space-between;
     transition: background 0.3s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-
+    background-color: transparent; /* Default for desktop header */
 }
 
 .header-desktop .social-media {
@@ -304,7 +299,15 @@ body.no-scroll {
     visibility: visible;
     transform: translateX(0);
 }
-
+.responsive-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.responsive-video-mobile {
+    display: none;
+}
 
 /* ========================================================= */
 /* --- MEDIA QUERIES FOR SWITCHING HEADERS --- */
@@ -318,7 +321,6 @@ body.no-scroll {
     .header-mobile {
         display: none; /* Ensure mobile header is hidden */
     }
-
     /* Adjust page content to start below desktop header */
     main {
         padding-top: 90px; /* Adjust this value to match your desktop header's height */
@@ -333,35 +335,13 @@ body.no-scroll {
     .header-mobile {
         display: flex; /* Show mobile header */
     }
-    .content {
-        width: 90vw;
-        height: 100dvh; /* 50% of the viewport height */
-        border-radius: 15px; /* Add rounded corners for a cleaner look */
-        overflow: hidden; /* Clips content to the rounded corners */
-
-    }
-        /* FIX #2: Make the entire video visible instead of cropping it */
     .responsive-video {
-        height: 100%; /* Full height of the .content container */
-        object-fit: contain; /* This will show the whole video, possibly with black bars */
+        display: none;
     }
+    .responsive-video-mobile {
+        display: block;
+    }      
 
-    /* FIX #1: Properly center the images within their containers */
-    .content .title,
-    .content .topic {
-        width: 300px; /* Specific width */
-        display: flex; /* Use flexbox for easy centering */
-        justify-content: center; /* Center the image horizontally */
-    }
-
-    /* Adjust the vertical spacing of the text */
-    .content .title {
-        transform: translate(-50%, -105%);
-    }
-
-    .content .topic {
-        transform: translate(-50%, 5%);
-    }
 
     /* Adjust page content to start below mobile header */
     main {
@@ -435,14 +415,18 @@ body.no-scroll {
     }
     /* Make the .content container smaller than the full screen */
     .content {
-        width: 100vw; /* 90% of the viewport width */
+        width: 90vw; /* 90% of the viewport width */
         height: 100dvh; /* 50% of the viewport height */
         border-radius: 15px; /* Add rounded corners for a cleaner look */
         overflow: hidden; /* Clips content to the rounded corners */
     }
+    .responsive-video{
+        display: none;
+    }
 
     /* FIX #2: Make the entire video visible instead of cropping it */
-    .responsive-video {
+    .responsive-video-mobile {
+        display: block;
         height: 100%; /* Full height of the .content container */
         object-fit: contain; /* This will show the whole video, possibly with black bars */
     }
@@ -493,8 +477,13 @@ body.no-scroll {
         margin-top: 0; /* Remove this and rely on `main` padding-top */
     }
     .responsive-video {
-        height: 100%; /* Full height of the .content container */
+        display: none;
+    }
+    .responsive-video-mobile {
+        display: block;
+        height: 100vh; /* Full height of the .content container */
         object-fit: contain; /* Show the whole video, possibly with black bars */
+
     }
     /* You can keep the .content size or adjust it further if needed */
     .content {
