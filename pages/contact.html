@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- Remixicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <!-- Boxicons -->
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -19,9 +21,9 @@
 </head>
 
     <body>
+        <header class="header-desktop">
+            <a href="/index.html" class="logo">PeakFysik</a>
 
-        <header class="header">
-            <a href="../index.html" class="logo">PeakFysik</a>
             <div class="social-media">
                 <a href="https://www.facebook.com/people/PeakFysik/61571074644315/"><i class='bxl bxl-facebook'></i></a>
                 <a href="https://www.instagram.com/peakfysik/"><i class='bxl bxl-instagram'></i> </a>
@@ -29,12 +31,74 @@
             </div>
 
             <nav class="navbar">
-                <a href="../index.html">Hem</a>
-                <a href="./services.html">Tjänster</a>
-                <a href="./about.html">Om</a>
-                <a href="contact.html">Kontakt</a>
+                <a href="/index.html">Hem</a>
+                <a href="/pages/services.html">Tjänster</a>
+                <a href="/pages/about.html">Om</a>
+                <a href="/pages/contact.html">Kontakt</a>
             </nav>
         </header>
+              <!--==================== HEADER MOBILE ====================-->
+      <header class="header-mobile" id="header">
+         <nav class="nav_container">
+            <a href="../index.html" class="nav__logo">PeakFysik</a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="../index.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Hem</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="./services.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Tjänster</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="./about.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Om</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="./contact.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Kontakt</span>
+                     </a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-large-line"></i>
+               </div>
+
+               <div class="nav__social">
+                  <a href="https://www.facebook.com/people/PeakFysik/61571074644315/" target="_blank" class="nav__social-link">
+                     <i class="ri-facebook-circle-line"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/peakfysik/" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+
+                  <a href="https://www.tiktok.com/@peak.fysik" target="_blank" class="nav__social-link">
+                     <i class="ri-tiktok-line"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </nav>
+      </header>
 
         <main>
             <section>
