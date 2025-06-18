@@ -308,6 +308,10 @@ body.no-scroll {
 }
 .responsive-video-mobile {
     display: none;
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 
 /* ========================================================= */
@@ -353,6 +357,16 @@ body.no-scroll {
     /* Adjust page content to start below mobile header */
     main {
         padding-top: var(--header-height); /* Uses the mobile header's defined height */
+    }
+    .responsive-video-mobile {
+        visibility: visible;
+        position: static;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .responsive-video {
+        display: none;
     }
 
     /* No longer need these specific tablet/mobile header adjustments here, as
