@@ -685,6 +685,7 @@
     /* --- Header & Navigation --- */
     .logo {
         font-size: 24px;
+        
     }
     .navbar a {
         font-size: 16px;
@@ -795,8 +796,6 @@ a {
   font-weight: var(--font-bold);
   font-size: 24px;
   font-family: var(--font-primary);
-  
-
 }
 
 .nav__close, 

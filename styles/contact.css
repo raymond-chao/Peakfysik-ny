@@ -18,6 +18,7 @@
     --normal-font-size: 1rem; /* Base font size */
     --h1-font-size: 2.25rem; /* Larger font for mobile menu links */
     --font-medium: 500;
+    --font-bold: 700;
     --z-fixed: 100;
     --white-color: #ffffff;
     --black-color: #000000;
@@ -69,7 +70,7 @@ body.no-scroll {
 
 /* Common logo style for both headers */
 .logo, .nav__logo {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--color-text-light);
     text-decoration: none;
@@ -188,7 +189,7 @@ body.no-scroll {
     flex-direction: column;
     justify-content: space-between;
     transition: left .4s;
-    z-index: var(--z-fixed) -1; /* Below toggle/close button, but above content */
+    z-index: 101; /* Below toggle/close button, but above content */
     overflow-y: auto; /* Allow scrolling if menu content is tall */
 }
 
@@ -324,6 +325,12 @@ body.no-scroll {
     /* Adjust page content to start below desktop header */
     main {
         padding-top: 90px; /* Adjust this value to match your desktop header's height */
+    }
+    .nav__logo {
+        color: var(--white-color);
+        font-weight: var(--font-bold);
+        font-size: 24px;
+        font-family: var(--font-primary);
     }
 }
 

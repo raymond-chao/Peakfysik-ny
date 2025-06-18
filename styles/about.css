@@ -6,6 +6,7 @@
     --color-text-subtle: #534836;
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: Arial, Helvetica, sans-serif;
+    --font-tertiary: 'Poppins', sans-serif;
     --color-primary: rgb(255, 196, 0); /* Your specific yellow/gold color */
     --color-primary-hover: orange; /* Example hover color for primary */
 
@@ -14,6 +15,7 @@
     --normal-font-size: 1rem; /* Example value, adjust as needed */
     --h1-font-size: 2.25rem; /* Example value, adjust as needed */
     --font-medium: 500; /* Example value, adjust as needed */
+    --font-bold: 700;
     --z-fixed: 100; /* Example value, adjust as needed */
     --white-color: #ffffff; /* Define white color */
     --black-color: #000000; /* Define black color */
@@ -95,6 +97,7 @@ body.no-scroll {
     font-weight: 700;
     z-index: 102;
     position: relative;
+    font-family: var(--font-tertiary)
 }
 
 .logo:hover, .nav__logo:hover {
@@ -780,6 +783,7 @@ body.no-scroll {
     /* These styles apply when header-mobile is active */
     .nav__logo {
         color: var(--color-text-light); /* Make logo white on dark mobile header */
+        font-family: var(--font-tertiary)
     }
 
     /* --- Main About Section (Hero) --- */
