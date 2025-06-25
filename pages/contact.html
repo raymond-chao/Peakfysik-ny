@@ -110,10 +110,16 @@
                                     <source src="../img/kontakt-video-bred.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <video autoplay muted loop playsinline class="responsive-video-mobile">
-                                    <source src="../img/peak-kontakt.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <div class="responsive-video-mobile" style="padding: 177.78% 0 0 0; position: relative;">
+                                    <iframe
+                                        src="https://player.vimeo.com/video/1094667665?h=50fd415ad4&autoplay=1&muted=1&loop=1&background=1&playsinline=1"
+                                        frameborder="0"
+                                        allow="autoplay; fullscreen; picture-in-picture"
+                                        allowfullscreen
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        title="peak-kontakt">
+                                    </iframe>
+                                </div>
                                 <div class="title"><img src="../img/kontaktany.svg" alt="kontakta text" id="kontakta"></div>
                                     <div class="topic"><img src="../img/ossny.svg" alt="oss text" id="oss"></div>
                             </div>
@@ -223,6 +229,7 @@
         </footer>
 
         <!-- Scripts -->
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../js/contact.js"></script>
