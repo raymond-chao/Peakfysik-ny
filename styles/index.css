@@ -36,7 +36,7 @@ html {
 body {
     font-family: var(--body-font); /* Ensure --body-font is defined if used, otherwise remove */
     font-size: var(--normal-font-size);
-    background-color: var(--white-color);
+    background-color: var(--black-color);
 }
 
 ul {
@@ -538,7 +538,7 @@ a {
 
 /* ===== Footer ===== */
 .footer-main {
-    color: var(--color-text-dark);
+    color: var(--color-text-light);
     display: flex;
     justify-content: center;
     line-height: 26px;
@@ -564,7 +564,7 @@ a {
     font-style: bold;
     letter-spacing: 3.36px;
     margin-bottom: 0.3em;
-    color: var(--color-text-dark);
+    color: var(--color-text-light);
 }
 
 .footer-main-slogan {
@@ -576,11 +576,11 @@ a {
 .footer-main-socials {
     display: flex;
     gap: 1.5em;
-    color: var(--color-text-dark);
+    color: var(--color-text-light);
 }
 
 .footer-main-socials a {
-    color: var(--color-text-dark);
+    color: var(--color-text-light);
     font-size: 30px;
 }
 
@@ -589,7 +589,7 @@ a {
 }
 
 .footer-text {
-    color: var(--color-text-dark);
+    color: var(--color-text-light);
 }
 
 /* ===== Media Queries for Responsiveness (REVISED & FIXED) ===== */
