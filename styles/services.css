@@ -175,6 +175,7 @@
 .content1 h3 {
     font-size: 20px;
     color: var(--color-text-light);
+
 }
 
 .content1 p {
@@ -696,6 +697,9 @@
     .slide .left-info .content1,
     .slide .left-info .content2 {
         bottom: 15%; /* Move content up to be above navigation */
+    }
+    .content1 p, .content2 p {
+        text-shadow: rgba(0, 0, 0, 1) 1px 1px 3px;
     }
 
     .penetrate-blur h1 {
