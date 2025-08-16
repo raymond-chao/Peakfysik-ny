@@ -29,7 +29,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
             Swal.fire({
                 icon: "success",
                 title: "Skickat!",
-                text: "Ditt meddelande har skickats.",
+                text: "Ditt meddelande har skickats, kolla också din skräppost för en bekräftelse.",
                 confirmButtonColor: "#6c63ff"
             });
             form.reset();
